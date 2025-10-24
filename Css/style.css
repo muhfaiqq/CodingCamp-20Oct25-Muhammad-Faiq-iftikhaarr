@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #000;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    padding: 10px 30px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 20px;
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+
+nav a.active, nav a:hover {
+    background: #f3f3f3;
+}
+
+/* Hero */
+.hero {
+    text-align: left;
+    padding: 50px 30px;
+}
+
+.hero h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.hero p {
+    color: #555;
+}
+
+.banner {
+    border: 1px solid #000;
+    height: 300px;
+    width: 100%;
+    margin-top: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.banner-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: none;
+}
+
+.banner-container img.active {
+    display: block;
+}
+
+.banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Headquarter */
+.headquarter {
+    border-top: 1px solid #000;
+    padding: 40px 30px;
+}
+
+.headquarter h2 {
+    margin-bottom: 30px;
+}
+
+.cities {
+    display: flex;
+    justify-content: space-around;
+}
+
+.city {
+    text-align: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+
+/* Message Us */
+.message {
+    border-top: 1px solid #000;
+    padding: 40px 30px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 8px 0 4px;
+}
+
+input, textarea {
+    border: 1px solid #000;
+    padding: 6px;
+    margin-bottom: 8px;
+}
+
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    border: 1px solid #000;
+    background: #fff;
+    padding: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f3f3f3;
+}
+
+.output-box {
+    width: 48%;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #000;
+    text-align: right;
+    padding: 10px 30px;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cities {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
+
+    form, .output-box {
+        width: 100%;
+    }
+}
