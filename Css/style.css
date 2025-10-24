@@ -207,19 +207,19 @@ input[type="number"] {
 }
 
 .cities .city:nth-child(1) .circle{
-  background-image: url('../jakarta.jpeg');
+  background-image: url('../image/jakarta.jpeg');
 }
 
 .cities .city:nth-child(2) .circle {
-  background-image: url('../bandung.jpeg');
+  background-image: url('../image/bandung.jpeg');
 }
 
 .cities .city:nth-child(3) .circle {
-  background-image: url('../surabaya.jpeg');
+  background-image: url('../image/surabaya.jpeg');
 }
 
 .cities .city:nth-child(4) .circle {
-  background-image: url('../bali.jpeg');
+  background-image: url('../image/bali.jpeg');
 }
 
 .profile-page {
@@ -279,15 +279,15 @@ input[type="number"] {
 
 
 #team-member-1 {
-   background-image: url('../orang3.jpeg');
+   background-image: url('../image/orang3.jpeg');
 }
 
 #team-member-2 {
-    background-image: url('../orang2.jpeg');
+    background-image: url('../image/orang2.jpeg');
 }
 
 #team-member-3 {
-    background-image: url('../orang1.jpg');
+    background-image: url('../image/orang1.jpg');
 }
 
 /* Message Us */
