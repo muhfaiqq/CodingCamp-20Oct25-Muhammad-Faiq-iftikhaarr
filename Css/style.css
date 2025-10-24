@@ -278,20 +278,16 @@ input[type="number"] {
 }
 
 
-#team-faiq {
-    background-image: url('../path/ke/foto-profil-faiq.jpg');
-
-    background-color: #eee; 
+#team-member-1 {
+   background-image: url('../orang3.jpeg');
 }
 
 #team-member-2 {
-    background-image: url('../path/ke/foto-profil-jane.jpg');
-    background-color: #eee;
+    background-image: url('../orang2.jpeg');
 }
 
 #team-member-3 {
-    background-image: url('../path/ke/foto-profil-john.jpg');
-    background-color: #eee;
+    background-image: url('../orang1.jpg');
 }
 
 /* Message Us */
@@ -367,4 +363,28 @@ footer {
     form, .output-box {
         width: 100%;
     }
+
+    header {
+        flex-direction: column;  /* Susun ke bawah */
+        align-items: center;     /* Tengahkan logo & nav */
+        gap: 15px;               /* Jarak antara logo dan nav */
+        padding: 15px;           /* Beri sedikit padding */
+    }
+
+    /* 2. Buat nav menyusun link menu secara vertikal */
+    nav {
+        display: flex;
+        flex-direction: column;  /* Susun link ke bawah */
+        width: 100%;             /* Buat nav penuh selebar layar */
+        align-items: center;     /* Tengahkan link */
+    }
+
+    /* 3. Atur setiap link menu */
+    nav a {
+        margin-left: 0;       /* Hapus margin kiri dari mode desktop */
+        margin-bottom: 10px;  /* Beri jarak antar link */
+        width: 90%;           /* Buat link lebih lebar */
+        text-align: center;   /* Teks di dalam link jadi ke tengah */
+    }
 }
+
