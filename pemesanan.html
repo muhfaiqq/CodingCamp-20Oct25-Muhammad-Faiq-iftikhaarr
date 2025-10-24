@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pemesanan</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Pemesanan Tiket - TiketKu</title>
+    <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
+    
     <header>
         <div class="logo">
-            <img src="Tiketku logo.png" alt="" style="width: 50px; height: 50px; border-radius: 50%;">
-        </div>
+            <img src="Tiketku logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%;">
         </div>
         <nav>
             <a href="index.html">Home</a>
@@ -21,122 +21,79 @@
     </header>
 
     <main>
-       <div class="booking-container">
-        
-            <div class="event-info">
-                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Gambar Konser Musik" class="event-image">
-                
-                <h1>Konser Musik Senja</h1>
-                <p>Nikmati malam yang tak terlupakan bersama musisi-musisi favorit Anda. Amankan tiket Anda sekarang sebelum kehabisan!</p>
-                
-                <div class="event-details">
-                    <h4>Detail Acara</h4>
-                    <ul>
-                        <li><strong>Tanggal:</strong> 25 Des 2025</li>
-                        <li><strong>Waktu:</strong> 19.00 WIB</li>
-                        <li><strong>Lokasi:</strong> Senayan, Jakarta</li>
-                    </ul>
-                </div>
+        <section class="booking-page">
+            <h2>Pesan Tiket Pesawat</h2>
+            <p>Silakan isi detail perjalanan Anda di bawah ini.</p>
+
+            <div class="booking-form-container">
+                <form id="bookingForm">
+                    
+                    <div class="form-group">
+                        <label>Tipe Perjalanan:</label>
+                        <div class="flight-type">
+                            <input type="radio" id="oneWay" name="flightType" value="Sekali Jalan" checked>
+                            <label for="oneWay">Sekali Jalan</label>
+                            <input type="radio" id="roundTrip" name="flightType" value="Pulang Pergi">
+                            <label for="roundTrip">Pulang Pergi</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="origin">Dari (Origin):</label>
+                            <input type="text" id="origin" placeholder="Kota atau Bandara">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Ke (Destination):</label>
+                            <input type="text" id="destination" placeholder="Kota atau Bandara">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="departureDate">Tanggal Berangkat:</label>
+                            <input type="date" id="departureDate">
+                        </div>
+                        <div class="form-group" id="returnDateGroup">
+                            <label for="returnDate">Tanggal Pulang:</label>
+                            <input type="date" id="returnDate">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adults">Dewasa (12+ thn):</label>
+                            <input type="number" id="adults" value="1" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="children">Anak (2-11 thn):</label>
+                            <input type="number" id="children" value="0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="infants">Bayi (<2 thn):</label>
+                            <input type="number" id="infants" value="0" min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cabinClass">Kelas Kabin:</label>
+                        <select id="cabinClass">
+                            <option value="Ekonomi">Ekonomi</option>
+                            <option value="Bisnis">Bisnis</option>
+                            <option value="First Class">First Class</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">Cari Tiket</button>
+                </form>
             </div>
-
-            <form id="booking-form" class="booking-form">
-                <h2>Pesan Tiket Anda</h2>
-                
-                <div class="form-group">
-                    <label for="name">Nama Lengkap:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="ticket-type">Pilih Tipe Tiket:</label>
-                    <select id="ticket-type" name="ticket-type">
-                        <option value="150000">Reguler (Rp 150.000)</option>
-                        <option value="300000">VIP (Rp 300.000)</option>
-                        <option value="500000">VVIP + Backstage (Rp 500.000)</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="quantity">Jumlah Tiket:</label>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" required>
-                </div>
-
-                <div class="price-display">
-                    Total:<span id="total-price">Rp 150.000</span>
-                </div>
-
-                <button type="submit" class="cta-button">Booking Tiket Sekarang</button>
-                
-                <div id="form-message" class="form-message"></div>
-
-            </form>
-
-        </div>
+        </section>
     </main>
 
-    <script>
-        const ticketTypeSelect = document.getElementById('ticket-type');
-        const quantityInput = document.getElementById('quantity');
-        const priceDisplay = document.getElementById('total-price');
-        const bookingForm = document.getElementById('booking-form');
-        const formMessage = document.getElementById('form-message');
+    <footer>
+        <p>Created By Faiq</p>
+    </footer>
 
-        // Fungsi untuk format mata uang
-        function formatRupiah(angka) {
-            return new Intl.NumberFormat('id-ID', {
-                style: 'currency',
-                currency: 'IDR',
-                minimumFractionDigits: 0
-            }).format(angka).replace("IDR", "Rp");
-        }
-
-        // Fungsi untuk menghitung dan update total harga
-        function updateTotalPrice() {
-            const ticketPrice = parseFloat(ticketTypeSelect.value);
-            const ticketQuantity = parseInt(quantityInput.value);
-            
-            if (isNaN(ticketPrice) || isNaN(ticketQuantity) || ticketQuantity < 1) {
-                priceDisplay.textContent = formatRupiah(0);
-                return;
-            }
-            
-            const total = ticketPrice * ticketQuantity;
-            priceDisplay.textContent = formatRupiah(total);
-        }
-
-        // Event listener untuk Tipe Tiket dan Jumlah
-        ticketTypeSelect.addEventListener('change', updateTotalPrice);
-        quantityInput.addEventListener('input', updateTotalPrice); 
-
-        // Event listener untuk menangani submit form
-        bookingForm.addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            
-            const formData = new FormData(bookingForm);
-            const data = Object.fromEntries(formData.entries());
-            console.log("Data Tiket yang akan dikirim:", data);
-            
-            formMessage.textContent = 'Memproses pemesanan Anda...';
-            formMessage.className = 'form-message success';
-            
-            // --- SIMULASI PENGIRIMAN DATA KE SERVER ---
-            setTimeout(() => {
-                formMessage.textContent = `Pemesanan berhasil! E-ticket telah dikirim ke ${data.email}.`;
-                formMessage.className = 'form-message success';
-                
-                bookingForm.reset();
-                updateTotalPrice(); // Reset harga ke default
-                
-            }, 2000);
-        });
-
-        // Inisialisasi harga saat halaman dimuat
-        updateTotalPrice(); 
-    </script>
+    <script src="Js/script.js"></script>
 </body>
 </html>

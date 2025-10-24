@@ -6,7 +6,32 @@ window.onload = function() {
     }
 };
 
+    document.addEventListener("DOMContentLoaded", function() {
 
+    const oneWayRadio = document.getElementById('oneWay');
+    const roundTripRadio = document.getElementById('roundTrip');
+    const returnDateGroup = document.getElementById('returnDateGroup');
+
+    if (oneWayRadio && roundTripRadio && returnDateGroup) {
+        
+
+        returnDateGroup.style.display = 'none';
+
+
+        roundTripRadio.addEventListener('change', function() {
+            if (this.checked) {
+                returnDateGroup.style.display = 'block';
+            }
+        });
+
+        oneWayRadio.addEventListener('change', function() {
+            if (this.checked) {
+                returnDateGroup.style.display = 'none';
+            }
+        });
+    }
+
+});
 
 // banner slider
 let currentBanner = 0;
